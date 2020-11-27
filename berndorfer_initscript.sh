@@ -4,6 +4,7 @@
 mkdir -p /tmp/berndorferinit
 
 # Add comment to .bashrc
+echo "" >> ~/.bashrc
 echo "# Berndorfer Install Script" >> ~/.bashrc
 
 # Install software-properties-common for add-apt-repository
@@ -40,8 +41,8 @@ sudo apt install --install-recommends -y kicad
 sudo apt install -y google-drive-ocamlfuse
 echo "Please enter google drive account information. Script will proceed after recieveing auth token."
 google-drive-ocamlfuse
-mkdir ~/Google-Drive
-google-drive-ocamlfuse ~/Google-Drive
+sudo mkdir -p /mnt/googledrive
+google-drive-ocamlfuse /mnt/googledrive
 # KeePass 2
 sudo apt install -y keepass2
 
